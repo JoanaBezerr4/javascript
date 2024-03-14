@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(43, 39, 39);
+}
+h1, body{
+    color: white;
+}
+.item{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+}
+div{
+    text-align: center;
+    line-height: 90px;
+    display: inline-block;
+}
+.azul{
+    background-color: blue;
+}
+.amarelo{
+    background-color: yellow;
+}
+.verde{
+    background-color: green;
+}
+.vermelho{
+    background-color: red;
+}
+.transitionBackground{
+    transition: background-color 2s;
+}
+.transitionBackground:hover{
+    background-color: red;
+}
+.transitionSize{
+    transition: transform 1s;
+}
+.transitionSize:hover{
+    transform: scale(1.5);
+}
+.transitionRotate{
+    transition: transform 2s;
+}
+.transitionRotate:hover{
+    transform: rotateZ(90deg);
+}
+.transitionDelay{
+    transition: width 1s 1s, height 1s;
+}
+.transitionDelay:hover{
+    width: 200px;
+    height: 200px;
+}
+.transitionCheckbox{
+    width: 50px;
+    height: 50px;
+    transition: transform 1s;
+}
+
+.transitionCheckbox:checked{
+    transform: rotateY(360deg);
+}
