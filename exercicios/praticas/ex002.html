@@ -11,6 +11,38 @@
         h1{
             color: white;
         }
+        main{
+            background-color: white;
+            padding: 20px;
+            margin: auto;
+            width: 400px;
+            height: 200px;
+            border-radius: 30px;
+            
+        }
+        input{
+            padding: 20px;
+        }
+        div{
+            padding-top: 10px;
+        }
+        #isexo{
+            padding-bottom: 20px;
+        }
+        #verificar{
+            background-color: aquamarine;
+            border: 2px solid rgba(0, 0, 0, 0.466);
+            height: 10px;
+            text-align: center;
+            line-height: 5px;
+
+
+        }
+        #verificar:hover{
+            transform: translateY(-10px);
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+        }
     </style>
 </head>
 <body>
@@ -21,11 +53,20 @@
         <label for="isexo">Sexo: </label>
         <input type="radio" name="sexo" id="isexo">Masculino
         <input type="radio" name="sexo" id="isexo">Feminino <br>
-        <input type="submit" value="Verificar">
-        <div id="res">Preencha os dados acima para ver o resultado!!</div>
+        <p><input type="submit" value="Verificar" id="verificar"></p>
+        <div id="res">
+            Preencha os dados acima para ver o resultado!!
+        </div>
     </main>
 
     <script>
+        var agora = new Date()
+        var ano = agora.getFullYear()
+        var niver = document.getElementById('idia')
+        var res = document.getElementById('res')
+
+        /*res.innerHTML = `Sua idade é de ${idade} anos`*/
+        
 
         
     </script>
