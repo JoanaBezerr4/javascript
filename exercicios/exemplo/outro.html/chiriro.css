@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(a-viagem-de-chihiro-disponivel-na-netflix.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section{
+    background-color: rgba(255, 255, 255, 0.295);
+    font-size: 1.2em;
+    height: 400px;
+    width: 600px;
+    margin: 50px;
+    padding: 20px;
+}
+div h1{
+    padding-bottom: 10px;
+}
+div p{
+    text-indent: 20px;
+    text-align: justify;
+    
+}
