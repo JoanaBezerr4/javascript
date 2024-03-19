@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+    <style>
+        body{
+            background-color: burlywood;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            color: white;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+            display: block;
+        }
+        main{
+            margin: auto;
+            background-color: aliceblue;
+            width: 420px;
+            padding: 10px;
+            padding-bottom: 30px;
+            border-radius: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.336);
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.616);
+        }
+        img{
+            display: block;
+            margin: auto;
+            width: 60vw;
+            border-radius: 90px;
+        }
+        p{
+            
+            text-align: center;
+            font-size: 1.2em;
+        }
+        #rodape{
+            color: aliceblue;
+        }
+        @media screen and (min-width: 992px) {
+            img{
+                width: 40vw;
+            }
+            main{
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+<body id="cor">
+    <h1>Que horas são?</h1>
+    <main>
+     <div id="res">
+
+    </div>   
+    <img src="" alt="" id="imagem">
+    </main>
+    <p id="rodape">@CursoemVideo</p>
+    
+
+    <script>
+        var agora = new Date()
+        var horas = agora.getHours()
+        var res = window.document.getElementById('res')
+        res.innerHTML = `<p>Agora são ${horas} horas.`
+        if (horas < 12){
+            document.getElementById('imagem').src = "imagens/pexels-artur-roman-1167355.jpg";
+        }else if (horas >= 12 && horas < 17){
+            document.getElementById('imagem').src = "imagens/pexels-anderson-martins-2386144.jpg";
+        }else if (horas >= 17 && horas < 23){
+            document.getElementById('imagem').src = "imagens/pexels-james-wheeler-1542493.jpg"
+        }else{
+            document.getElementById('imagem').scr = "imagens/pexels-gareth-davies-910411.jpg"
+        }
+    </script>
+
+</body>
+</html>
