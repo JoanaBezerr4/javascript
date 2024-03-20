@@ -20,55 +20,26 @@
             border-radius: 30px;
             
         }
-        input{
-            padding: 20px;
-        }
         div{
             padding-top: 10px;
         }
-        #isexo{
-            padding-bottom: 20px;
-        }
-        #verificar{
-            background-color: aquamarine;
-            border: 2px solid rgba(0, 0, 0, 0.466);
-            height: 10px;
-            text-align: center;
-            line-height: 5px;
 
-
-        }
-        #verificar:hover{
-            transform: translateY(-10px);
-            transition-duration: 0.5s;
-            transition-timing-function: ease-in-out;
-        }
     </style>
 </head>
 <body>
     <h1>Verificador de idade</h1>
     <main>
         <label for="idia">Ano de Nascimento: </label>
-        <input type="date" name="dia" id="idia"><br>
+        <p><input type="date" name="dia" id="idia"></p><br>
         <label for="isexo">Sexo: </label>
-        <input type="radio" name="sexo" id="isexo">Masculino
-        <input type="radio" name="sexo" id="isexo">Feminino <br>
-        <p><input type="submit" value="Verificar" id="verificar"></p>
+        <input type="radio" name="sexo" id="mas">Masculino
+        <input type="radio" name="sexo" id="fem">Feminino <br>
+        <p><input type="submit" value="Verificar"  onclick="verificar()"></p>
         <div id="res">
             Preencha os dados acima para ver o resultado!!
         </div>
     </main>
 
-    <script>
-        var agora = new Date()
-        var ano = agora.getFullYear()
-        var niver = document.getElementById('idia')
-        var res = document.getElementById('res')
-
-        /*res.innerHTML = `Sua idade é de ${idade} anos`*/
-        
-
-        
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
