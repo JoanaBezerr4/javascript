@@ -6,7 +6,7 @@
     <title>Horas</title>
     <style>
         body{
-            background-color: burlywood;
+            
             font-family: Arial, Helvetica, sans-serif;
         }
         h1{
@@ -64,16 +64,21 @@
     <script>
         var agora = new Date()
         var horas = agora.getHours()
+        var img = document.getElementById('imagem')
         var res = window.document.getElementById('res')
         res.innerHTML = `<p>Agora são ${horas} horas.`
         if (horas < 12){
-            document.getElementById('imagem').src = "imagens/pexels-artur-roman-1167355.jpg";
+            imagem.src = "imagens/pexels-artur-roman-1167355.jpg";
+            document.body.style.background = "burlywood"
         }else if (horas >= 12 && horas < 17){
-            document.getElementById('imagem').src = "imagens/pexels-anderson-martins-2386144.jpg";
+            imagem.src = "imagens/pexels-anderson-martins-2386144.jpg";
+            document.body.style.background = "rgb(228, 192, 100)"
         }else if (horas >= 17 && horas < 23){
-            document.getElementById('imagem').src = "imagens/pexels-james-wheeler-1542493.jpg"
+            imagem.src = "imagens/pexels-james-wheeler-1542493.jpg"
+            document.body.style.background = "mediumpurple"
         }else{
-            document.getElementById('imagem').scr = "imagens/pexels-gareth-davies-910411.jpg"
+           imagem.scr = "imagens/pexels-gareth-davies-910411.jpg"
+           document.body.style.background = "lemonchiffon"
         }
     </script>
 
