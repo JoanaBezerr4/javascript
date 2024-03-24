@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+body,html{
+    background-color: rgb(101, 170, 240);
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+h1, footer{
+    text-align: center;
+    color: aliceblue;
+}
+section{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 440px;
+    height: 230px;
+    box-shadow: 2px 2px 6px black;
+    
+}
