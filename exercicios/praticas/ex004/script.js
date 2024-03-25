@@ -1,6 +1,22 @@
+let num = document.getElementById('inum')
+let frame = document.getElementById('iselec')
+let valores = []
+function numero(n){
+    if (Number(n) >= 1 && Number(n) <=100){
+        return true
+    } else{
+        return false
+    }
+}
+function inlista (n, l){
+    if (l.indexOf(Number(n)) != -1){
+        return true
+    } else{
+        return false
+    }
+}
 function adicionar(){
-    let num = document.getElementById('inum')
-    let frame = document.getElementById('iselec')
+    let numb = Number(num.value)
     if (num.value.length == 0){
         window.alert('ERRO! Digite um número....')
     } else if (num.value > 100){
@@ -13,12 +29,8 @@ function adicionar(){
         let lista = [numb]
     }
 }
-
 function acabar(){
     let res = document.getElementById('res')
     res.innerHTML = `Ao todo temos ${lista.length + 1} itens na lista`
-    document.section.style.heigth ='300px'
 }
-let num = document.getElementById('inum')
-let numb = Number(num.value)
-let lista = [numb]
+document.section.style.heigth ='300px'
