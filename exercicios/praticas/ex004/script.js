@@ -16,21 +16,46 @@ function inlista (n, l){
     }
 }
 function adicionar(){
-    let numb = Number(num.value)
     if (num.value.length == 0){
         window.alert('ERRO! Digite um número....')
     } else if (num.value > 100){
         window.alert('ERRO! Digite um número entre 1 e 100')
     } else{
+        valores.push(Number(num.value))
         let numb = Number(num.value)
         let item = document.createElement('option')
-        item.text = `O número ${numb} foi adicionado a lista`
+        item.text = `O número ${num.value} foi adicionado a lista`
         frame.appendChild(item)
-        let lista = [numb]
     }
+    num.value = ''
+    num.focus()
 }
 function acabar(){
-    let res = document.getElementById('res')
-    res.innerHTML = `Ao todo temos ${lista.length + 1} itens na lista`
+    if (valores.length == 0){
+        window.alert('Adicione Valores a essa lista!')
+    }else{
+        let tot = valores.length
+        let res = document.getElementById('res')
+        let maior = valores[0]
+        let menor = valores[0]
+        let soma = 0
+        let media = 0
+        for (let pos in valores){
+            soma += valores[pos]
+            media = soma/tot
+            if (valores[pos] > maior){
+                maior = valores[pos]
+            } 
+            if (valores[pos] < menor){
+                menor = valores[pos]
+            }
+        }
+        res.innerHTML = ``
+        res.innerHTML += `<p> Ao todo temos ${tot} números cadastrados </p>`
+        res.innerHTML += `<p>O maior valor adicionado foi ${maior}`
+        res.innerHTML += `<p>O menor valor adicionado foi ${menor}`
+        res.innerHTML += `<p>Somando os valores adicionados temos ${soma}`
+        res.innerHTML += `<p>A Média entre os valores foi ${media}`
+    }
+    
 }
-document.section.style.heigth ='300px'
